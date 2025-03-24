@@ -1,0 +1,73 @@
+/* NewsItem.css */
+.news_item {
+    display: flex;
+    flex-direction: row;
+    width: 100%; /* Use full width for better responsiveness */
+    max-width: 600px; /* Set a max width for larger screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px auto; /* Center the item */
+    height: auto; /* Allow height to adjust based on content */
+  }
+  
+  .news_text {
+    flex: 1; /* Allow the text to take available space */
+    padding: 1rem; /* Use rem for responsive padding */
+    font-size: 1.2rem; /* Base font size */
+    line-height: 1.5; /* Improve readability with line height */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove default margin */
+    overflow-wrap: break-word; /* Prevent overflow of long words */
+    word-wrap: break-word; /* For older browsers */
+    hyphens: auto; /* Enable hyphenation for better text flow */
+  }
+  
+  @media (max-width: 768px) {
+    .news_text {
+        font-size: 1rem; /* Smaller font size for mobile */
+        padding: 0.5rem; /* Less padding on mobile */
+    }
+  }
+  @media (max-width: 480px) {
+    .news_text {
+        font-size: 0.9rem; /* Even smaller font size for very small screens */
+    }
+  }
+  
+  .news_image {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .news_image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .news_item {
+      flex-direction: column; /* Stack text and image on smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+    }
+  
+    .news_image {
+      flex: 0 0 auto; /* Allow image to take its natural size */
+      width: 100%; /* Full width for the image */
+    }
+  
+    .news_text {
+      font-size: 1rem; /* Smaller font size for mobile */
+      padding: 0.5rem; /* Less padding on mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .news_text {
+      font-size: 0.9rem; /* Even smaller font size for very small screens */
+    }
+  }

@@ -1,0 +1,180 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 24px;
+}
+.navbarTitle {
+    font-size: 4vw;
+    font-weight: bold;
+    color: red;
+    background: yellow;
+    padding: 3px 0px 3px 10px;
+    margin-right: 12px;
+}
+.navbarLinks {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0vw;
+    padding: 0px 14px;
+    background-color: #062a77;
+    font-weight: bold;
+    font-size: 3vw;
+}
+.navbarLinks li {
+    color: white;
+    cursor: pointer;
+}
+.navbarLinks li:hover {
+    text-decoration: underline;
+}
+/* Hamburger button */
+.navbarToggle {
+    display: none;
+    /* Hidden by default */
+    background: none;
+    /* No background */
+    border: none;
+    /* No border */
+    color: rgb(255, 255, 255);
+    /* Text color */
+    font-size: 75px;
+    /* Font size */
+    cursor: pointer;
+    /* Pointer cursor */
+    padding: 0;
+    /* Remove padding */
+    margin: 0;
+    /* Remove margin */
+    outline: none;
+   /* Remove outline on focus */
+}
+/* Sidebar styles */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 12px;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    /* Background color */
+    width: 50%;
+    /* Set the width to 50% of the viewport */
+    max-width: 400px;
+    /* Optional: Set a max width for larger screens */
+    height: 100%;
+    /* Full height */
+    padding: 10px 0;
+}
+.sidebarLinks {
+    color: #062a77;
+    cursor: pointer;
+    text-align: justify;
+}
+.sidebarLinks li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 37px;
+}
+/* Close button */
+.closeBtn {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Media Queries for Responsiveness */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .navbarTitle {
+        font-size: 4vw;
+        /* Adjust title size for tablets */
+    }
+    .navbarLinks {
+        font-size: 3vw;
+        /* Adjust link size for tablets */
+        gap: 20px;
+        /* Reduce gap between links */
+    }
+    .navbarToggle {
+        display: none;
+        /* Show hamburger button on tablets */
+    }
+    .sidebar {
+        width: 70%;
+        /* Wider sidebar on tablets */
+        max-width: 300px;
+        /* Adjust max width */
+    }
+    .sidebarLinks li {
+        font-size: 30px;
+       /* Adjust font size for sidebar links */
+    }
+}
+
+/* PC Styles */
+@media (min-width: 1025px) {
+    .navbarTitle {
+        font-size: 4vw;
+        /* Original title size for PCs */
+    }
+    .navbarLinks {
+        font-size: 3vw;
+        /* Original link size for PCs */
+        gap: 40px;
+        /* Original gap between links */
+    }
+    .sidebar {
+        width: 50%;
+        /* Original sidebar width for PCs */
+        max-width: 400px;
+        /* Original max width */
+    }
+    .sidebarLinks li {
+        font-size: 37px;
+        /* Original font size for sidebar links */
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbarLinks {
+        display: none;
+        /* Hide links on mobile */
+    }
+
+    .navbarTitle {
+        font-size: 54px;
+        margin-right: 10px;
+    }
+
+    .navbarToggle {
+        display: block;
+        /* Show hamburger button on mobile */
+    }
+
+    .navbarLinks.open {
+        display: flex;
+        /* Show links when sidebar is open */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        /* Adjust based on navbar height */
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        padding: 10px 0px;
+    }
+}
