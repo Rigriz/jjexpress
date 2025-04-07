@@ -1,0 +1,36 @@
+/* components/TopicComponent.module.css */
+
+.container{
+  display: flex;
+  flex-direction: column;  /* Display items in a row */
+  flex-wrap: wrap;      /* Allow wrapping of items if they overflow */
+  gap: 15px;            /* Add some space between items */
+  justify-content: center; /* Center align the items horizontally */
+  margin:1rem;
+}
+
+.topicContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(4, 1fr);    /* 4 rows */
+  gap: 20px; /* space between items */
+  padding: 20px; /* space around the grid */
+}
+
+.newsItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.newsItem h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.newsItem p {
+  font-size: 14px;
+  color: #555;
+}
