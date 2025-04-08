@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import style from './topiclayout.module.css';
 //import TopicLayout from './components/TopicLayout';
-import NewsItem from './components/news/news.jsx';
+import NewsItem, { SingleItem } from './components/news/news.jsx';
 //import SuccessPage from './admin/SuccessPage';
 //import PasswordInput from './admin/PasswordInput';
 import styles from "./page.module.css";
@@ -33,10 +33,10 @@ export default function Home() {
           <div key={index} className={style.topicItem}>
             {topic}
             <div className={style.topicContainer}>
-            <NewsItem collectionName={topic} />
-            <NewsItem collectionName={topic} />
-            <NewsItem collectionName={topic} />
-            <NewsItem collectionName={topic} />
+              <SingleItem collectionName={topic} index={0} />
+              <SingleItem collectionName={topic} index={1} />
+              <SingleItem collectionName={topic} index={2} />
+              <SingleItem collectionName={topic} index={3} />
               <h1>
                 12
               </h1>
