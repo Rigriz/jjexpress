@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import Navbar from './components/navbar/Navbar';
 import style from './topiclayout.module.css';
 //import TopicLayout from './components/TopicLayout';
 import NewsItem, { SingleItem } from './components/news/news.jsx';
@@ -53,11 +52,6 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <header className={styles.Appheader}>
-          <Navbar />
-        </header>
-        <div>
-        </div>
         <div className={styles.DisplayNews} style={{ margin: "12px 12px" }}>
           <NewsItem collectionName="jobs" />
         </div>

@@ -1,6 +1,8 @@
 // src/components/Navbar.js
+'use client'
 import React, { useState } from 'react';
-import styles from "./navbar.module.css" // Import the CSS module
+import Link from 'next/link'; // Import Link from next/link
+import styles from './navbar.module.css'; // Import the CSS module
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,14 +10,12 @@ const Navbar = () => {
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
-
     return (
         <div>
             <nav className={styles['navbar']}>
                 <div className={styles['navbarTitle']}>
                     JJ&nbsp;<a style={{ backgroundColor: 'red', color: 'white', padding: '3px 14px 3px 10px' }}>Express</a>
                 </div>
-
                 <button className={styles['navbarToggle']} onClick={toggleSidebar}>
                     {isOpen ? (
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
@@ -28,23 +28,21 @@ const Navbar = () => {
                     )}
                 </button>
                 <ul className={`${styles['navbarLinks']} ${isOpen ? styles['open'] : ''}`}>
-                    <li>Politics</li>
-                    <li>Business</li>
-                    <li>Sports</li>
-                    <li>Jobs</li>
-                    <li>Karnataka</li>
-                    <li>India</li>
+                    <li><Link href="/politics">Politics</Link></li>
+                    <li><Link href="/sports">Sports</Link></li>
+                    <li><Link href="/jobs">Jobs</Link></li>
+                        <li><Link href="/culture">Culture</Link></li>
+                        <li><Link href="/argiculture">Argiculture</Link></li>
                 </ul>
             </nav>
             {isOpen && (
                 <div className={`${styles['sidebar']} ${isOpen ? styles['open'] : ''}`}>
                     <ul className={styles['sidebarLinks']}>
-                        <li>Politics</li>
-                        <li>Business</li>
-                        <li>Sports</li>
-                        <li>Jobs</li>
-                        <li>Karnataka</li>
-                        <li>India</li>
+                        <li><Link href="/politics">Politics</Link></li>
+                        <li><Link href="/sports">Sports</Link></li>
+                        <li><Link href="/jobs">Jobs</Link></li>
+                        <li><Link href="/culture">Culture</Link></li>
+                        <li><Link href="/argiculture">Argiculture</Link></li>
                     </ul>
                 </div>
             )}
