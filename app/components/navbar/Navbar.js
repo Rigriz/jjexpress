@@ -32,7 +32,7 @@ const Navbar = () => {
                     <li><Link href="/sports">Sports</Link></li>
                     <li><Link href="/jobs">Jobs</Link></li>
                         <li><Link href="/culture">Culture</Link></li>
-                        <li><Link href="/argiculture">Argiculture</Link></li>
+                        <li><Link href="/agriculture">Agriculture</Link></li>
                 </ul>
             </nav>
             {isOpen && (
@@ -42,7 +42,7 @@ const Navbar = () => {
                         <li><Link href="/sports">Sports</Link></li>
                         <li><Link href="/jobs">Jobs</Link></li>
                         <li><Link href="/culture">Culture</Link></li>
-                        <li><Link href="/argiculture">Argiculture</Link></li>
+                        <li><Link href="/agriculture">Agriculture</Link></li>
                     </ul>
                 </div>
             )}

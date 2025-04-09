@@ -22,7 +22,7 @@ function NewsItem() {
           throw new Error('Network response was not ok');
         }
         const jsonData = await response.json();
-        setArticles(jsonData.politics);
+        setArticles(jsonData.jobs);
       } catch (error) {
         console.error("Error retrieving data:", error);
         setError(error.message);
