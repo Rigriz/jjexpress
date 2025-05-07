@@ -1,6 +1,6 @@
-"use client"; // Mark this file as a client component
+ // Mark this file as a client component
 {
-/*
+/*"use client";
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './newsform.module.css'; // Import the CSS module
