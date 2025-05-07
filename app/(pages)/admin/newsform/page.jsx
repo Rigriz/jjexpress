@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './newsform.module.css'; // Import the CSS module
-import { supabase } from "../../../lib/supabase"
+import { supabase} from '../../../../lib/supabase';
 export default function NewsForm() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
